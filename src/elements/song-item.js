@@ -1,5 +1,6 @@
 // Custom events
 const playClickEvent = new CustomEvent('play_click')
+const favoriteClickEvent = new CustomEvent('favorite_click')
 
 // Custom element
 customElements.define('song-item', class extends HTMLElement {
@@ -41,6 +42,11 @@ customElements.define('song-item', class extends HTMLElement {
     // Définition du custom event pour le bouton play
     this.querySelector('.play-button').addEventListener('click', () => {
       this.dispatchEvent(playClickEvent)
+    })
+
+    // Définition du custom event pour le bouton play
+    this.querySelector('.favorite-button').addEventListener('click', () => {
+      this.dispatchEvent(favoriteClickEvent)
     })
   }
 })

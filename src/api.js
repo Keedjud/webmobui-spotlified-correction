@@ -6,4 +6,6 @@ const getArtists = () => fetchJson('/api/artists')
 
 const getSongs = (id) => fetchJson(`/api/artists/${id}/songs`)
 
-export { getArtists, getSongs }
+const searchSongs = (id) => fetchJson(`/api/songs/search/${id}`)
+
+export { getArtists, getSongs, searchSongs }
